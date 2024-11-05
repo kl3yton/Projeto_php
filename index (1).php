@@ -1,5 +1,5 @@
 <?php 
-    include ('bd_agenda.php');
+    include ('db_agenda.php');
 ?>
 
 <!DOCTYPE html>
