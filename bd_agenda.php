@@ -25,7 +25,7 @@ if ($conexao->query($sql) === TRUE) {
         emailCotato VARCHAR(100) NOT NULL,
         telefoneContato VARCHAR(50) NOT NULL,
         data_nasc_Cotato DATE NOT NULL,
-        tagFavorito TINYINT(1) DEFAULT NULL
+        flagFavorito TINYINT(1) DEFAULT NULL
     )";
 
     if ($conexao->query($sql) === FALSE) {
