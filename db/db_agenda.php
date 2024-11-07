@@ -5,7 +5,7 @@ $user = 'root';
 $password = '';
 $dbname = 'agenda_telefonica';
 
-$conexao = new mysqli($host, $user, $password);
+$conexao = new mysqli($host, $user, $password, $dbname);
 
 // Verifica a conexão
 if ($conexao->connect_error) {
@@ -34,7 +34,5 @@ if ($conexao->query($sql) === TRUE) {
     // A linha de sucesso foi removida
 } else {
     die("Erro ao criar banco de dados: " . $conexao->error);
-}
-
-$conexao->close();
+}   
 ?>
