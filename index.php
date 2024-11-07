@@ -20,6 +20,7 @@
             <a href="index.php?menuop=eventos">Eventos</a>
         </nav>
     </header>
+    <hr>
     <main>
         <?php //Quando clicar no link e ele é encaminhado para um local do site.
             $menuop = (isset($_GET["menuop"]))?$_GET["menuop"]:"home";
