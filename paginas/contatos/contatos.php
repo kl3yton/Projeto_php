@@ -5,7 +5,7 @@
     <h3>Contatos</h3>
 </head>
 <div>
-    <a href="#">Novo Contato</a>
+    <a href="index.php?menuop=cad-contatos">Novo Contato</a>
 </div>
 <table border="1">
     <thead>
