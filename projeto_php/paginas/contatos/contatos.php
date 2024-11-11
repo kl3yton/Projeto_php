@@ -15,11 +15,19 @@
             <th>E-mail</th>
             <th>Telefone</th>
             <th>Data de Nasc.</th>
+            <th>Edição</th>
+            
         </tr>
     </thead>
     <tbody>
     <?php 
-    $sql = "SELECT * FROM tb_contato";
+    $sql = "SELECT 
+                idcontato,
+                upper(nomeContato) AS nomeContato,
+                lower(emailContato) AS emailContato,
+                telefoneContato,
+                date_format(data_nasc_Contato, '%d/%m/%y') AS data_nasc_Contato
+            FROM agenda_telefonica.tb_contato;";
     $rs = mysqli_query($conexao,$sql) or die("Erro ao conectar a consulta" . mysqli_error($conexao));
 
     while ($dados = mysqli_fetch_assoc($rs)) {
@@ -30,6 +38,7 @@
                 <td><?=$dados["emailContato"] ?></td>
                 <td><?=$dados["telefoneContato"] ?></td>
                 <td><?=$dados["data_nasc_Contato"] ?></td>
+                <td><a href="index.php?menuop=editar-contato&idContato=<?=$dados["idcontato"] ?>">Editar</a></td>
             </tr>
         <?php 
             }

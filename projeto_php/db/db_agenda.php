@@ -12,6 +12,7 @@ if ($conexao->connect_error) {
     die("Falha na conexão: " . $conexao->connect_error);
 }
 
+
 // Cria o banco de dados se não existir
 $sql = "CREATE DATABASE IF NOT EXISTS $dbname";
 
@@ -35,4 +36,5 @@ if ($conexao->query($sql) === TRUE) {
 } else {
     die("Erro ao criar banco de dados: " . $conexao->error);
 }   
+
 ?>
