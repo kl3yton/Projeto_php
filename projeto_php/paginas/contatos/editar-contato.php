@@ -11,10 +11,10 @@ $dados = mysqli_fetch_assoc($rs);
 
 <form action="index.php?menuop=atualizar-contato" method="post">
 
-    <div>
-        <label for="idContato">ID:</label>
-        <input type="text" name="idContato" value="<?= $dados["idContato"] ?>">
-    </div>
+<div>
+    <label for="idContato">ID:</label>
+    <input type="text" name="idContato" value="<?= $dados["idContato"] ?? '' ?>">
+</div>
     
     <div>
         <label for="nomeContato">Nome:</label>

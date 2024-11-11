@@ -12,14 +12,13 @@ if ($conexao->connect_error) {
     die("Falha na conexão: " . $conexao->connect_error);
 }
 
-
 // Cria o banco de dados se não existir
 $sql = "CREATE DATABASE IF NOT EXISTS $dbname";
 
 if ($conexao->query($sql) === TRUE) {
     $conexao->select_db($dbname);
     
-    // Cria a tabela se não existir
+    // Cria a tabela tb_contato se não existir
     $sql = "CREATE TABLE IF NOT EXISTS tb_contato(
         idcontato INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
         nomeContato VARCHAR(200) NOT NULL,
@@ -30,9 +29,23 @@ if ($conexao->query($sql) === TRUE) {
     )";
 
     if ($conexao->query($sql) === FALSE) {
-        die("Erro na criação da tabela: " . $conexao->error);
+        die("Erro na criação da tabela tb_contato: " . $conexao->error);
     } 
-    // A linha de sucesso foi removida
+    
+    // Criação da nova tabela tb_produtos
+    $sql = "CREATE TABLE IF NOT EXISTS tb_produtos(
+        idproduto INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        nomeProduto VARCHAR(200) NOT NULL,
+        descricaoProduto TEXT,
+        precoProduto DECIMAL(10, 2) NOT NULL,
+        quantidadeProduto INT(11) NOT NULL,
+        dataCadastroProduto TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )";
+
+    if ($conexao->query($sql) === FALSE) {
+        die("Erro na criação da tabela tb_produtos: " . $conexao->error);
+    } 
+
 } else {
     die("Erro ao criar banco de dados: " . $conexao->error);
 }   
