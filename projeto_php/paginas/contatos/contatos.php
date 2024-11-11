@@ -15,7 +15,8 @@
             <th>E-mail</th>
             <th>Telefone</th>
             <th>Data de Nasc.</th>
-            <th>Edição</th>
+            <th>Editar</th>
+            <th>Excluir</th>
             
         </tr>
     </thead>
@@ -39,6 +40,7 @@
                 <td><?=$dados["telefoneContato"] ?></td>
                 <td><?=$dados["data_nasc_Contato"] ?></td>
                 <td><a href="index.php?menuop=editar-contato&idContato=<?=$dados["idcontato"] ?>">Editar</a></td>
+                <td><a href="index.php?menuop=excluir-contato&idContato=<?=$dados["idcontato"] ?>">Excluir</a></td>
             </tr>
         <?php 
             }
