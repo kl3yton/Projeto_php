@@ -13,7 +13,7 @@ $dados = mysqli_fetch_assoc($rs);
 
 <div>
     <label for="idContato">ID:</label>
-    <input type="text" name="idContato" value="<?= $dados["idContato"] ?? '' ?>">
+    <input type="text" name="idContato" value="<?= $dados["idContato"] ?>">
 </div>
     
     <div>
@@ -29,6 +29,11 @@ $dados = mysqli_fetch_assoc($rs);
     <div>
         <label for="telefoneContato">Telefone:</label>
         <input type="text" name="telefoneContato" value="<?= $dados["telefoneContato"] ?>">
+    </div>
+
+    <div>
+        <label for="enderecoContato">Endereço:</label>
+        <input type="text" name="enderecoContato" value="<?= $dados["enderecoContato"] ?>">
     </div>
 
     <div>

@@ -20,6 +20,11 @@
     </div>
 
     <div>
+        <label for="enderecoeContato">Endereço</label>
+        <input type="text" name="enderecoContato">
+    </div>
+
+    <div>
         <label for="data_nasc_Contato">Data de Nascimento</label>
         <input type="date" name="data_nasc_Contato">
     </div>
