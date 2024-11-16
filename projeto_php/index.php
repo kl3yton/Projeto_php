@@ -12,7 +12,8 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
     <link rel="stylesheet" href="css/estilo-padrao.css">
     <title>Sistema de Agendas</title>
 </head>
@@ -21,7 +22,7 @@
     <div class="container">
        
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.php?menuop=home">
                 <img src="img/logo_agendador.png" alt="Sis-Agendador" width="120">
             </a>
 
@@ -29,10 +30,15 @@
 
             <div class="collapse navbar-collapse" id="ConteudoNavbarSuportado">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item" id="home"><a class="nav-link" href="index.php?menuop=home">Home</a></li>
+
+                    <li class="nav-item active" id="home"><a class="nav-link" href="index.php?menuop=home">Home</a></li>
+
                     <li class="nav-item" id="contatos"><a class="nav-link" href="index.php?menuop=contatos">Contatos</a></li>
+
                     <li class="nav-item" id="tarefas"><a class="nav-link" href="index.php?menuop=tarefas">Tarefas</a></li>
+
                     <li class="nav-item" id="eventos"><a class="nav-link" href="index.php?menuop=eventos">Eventos</a></li>
+
                 </ul>
             </div>
         </nav>
@@ -79,7 +85,7 @@
     ?>
     </div>
     </main>
-    <footer class="container-fluid fixed-bottom bg-dark">
+    <footer class="container-fluid bg-dark">
         <div class="text-center">Sistema Agendador V 1.0</div>
 
     </footer>
