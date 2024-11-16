@@ -15,7 +15,7 @@ $dados = mysqli_fetch_assoc($rs);
     <label for="idContato">ID:</label>
     <div class="input-group mb-3">
         <span class="input-group-text"><i class="bi bi-key-fill"></i></span>
-        <input class="form-control" type="text" name="idContato" value="<?= $dados["idContato"] ?>">
+        <input class="form-control" type="text" name="idContato" value="<?= $dados["idContato"] ?>" readonly>
     </div>
 </div>
     
