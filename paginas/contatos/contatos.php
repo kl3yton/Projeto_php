@@ -2,15 +2,17 @@
     include ("db/db_agenda.php");
 ?>
 <head>
-    <h3>Contatos</h3>
+    <h3><i class="bi bi-person-square"> </i>Contatos</h3>
 </head>
 <div>
-    <a href="index.php?menuop=cad-contatos">Novo Contato</a>
+    <a class="btn btn-outline-primary mb-2" href="index.php?menuop=cad-contatos"><i class="bi bi-person-fill-add"></i> Novo Contato</a>
 </div>
 <div>
     <form action="index.php?menuop=contatos" method="post">
-        <input type="text" name="txt_pesquisa">
-        <input type="submit" value="Pesquisa">
+        <div class="input-group">
+        <input class="form-control col-3" type="text" name="txt_pesquisa">
+        <button class="btn btn-outline-success btn-sm" type="submit"> <i class="bi bi-search"> </i>Pesquisa</button>
+        </div>
     </form>
 </div>
 <div class="table1">
@@ -60,12 +62,16 @@
             <tr>
                 <td><?=$dados["idContato"] ?></td>
                 <td class="text-nowrap"><?=$dados["nomeContato"] ?></td>
-                <td><?=$dados["emailContato"] ?></td>
-                <td><?=$dados["telefoneContato"] ?></td>
-                <td><?=$dados["enderecoContato"] ?></td>
+                <td class="text-nowrap"><?=$dados["telefoneContato"] ?></td>
+                <td class="text-nowrap"><?=$dados["emailContato"] ?></td>
+                <td class="text-nowrap"><?=$dados["enderecoContato"] ?></td>
                 <td><?=$dados["data_nasc_Contato"] ?></td>
-                <td><a href="index.php?menuop=editar-contato&idContato=<?=$dados["idContato"] ?>">Editar</a></td>
-                <td><a href="index.php?menuop=excluir-contato&idContato=<?=$dados["idContato"] ?>">Excluir</a></td>
+                <td class="text-center">
+                    <a class="btn btn-outline-warning btn-sm" href="index.php?menuop=editar-contato&idContato=<?=$dados["idContato"] ?>"><i class="bi bi-pencil-square"></i></a>
+                </td>
+                <td class="text-center">
+                    <a class="btn btn-outline-danger btn-sm" href="index.php?menuop=excluir-contato&idContato=<?=$dados["idContato"] ?>"><i class="bi bi-trash"></i></a>
+                </td>
             </tr>
     <?php 
         }
