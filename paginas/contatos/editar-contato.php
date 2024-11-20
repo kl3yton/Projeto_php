@@ -31,22 +31,22 @@ $dados = mysqli_fetch_assoc($rs);
         </div>
 
         <div>
-            <label for="emailContato">E-mail:</label>
-            <div class="input-group mb-3">
-                <span class="input-group-text">@</span>
-                <input class="form-control" type="email" name="emailContato" value="<?= $dados["emailContato"] ?>" required>
-                <div class="valid-feedback">Está tudo correto, prossiga!</div>
-                <div class="invalid-feedback">Por favor, digite um e-mail válido!</div>
-            </div>
-        </div>
-
-        <div>
             <label for="telefoneContato">Telefone:</label>
             <div class="input-group mb-3">
                 <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
                 <input class="form-control" type="text" name="telefoneContato" value="<?= $dados["telefoneContato"] ?>" required>
                 <div class="valid-feedback">Está tudo correto, prossiga!</div>
                 <div class="invalid-feedback">Por favor, digite um número correto!</div>
+            </div>
+        </div>
+
+        <div>
+            <label for="emailContato">E-mail:</label>
+            <div class="input-group mb-3">
+                <span class="input-group-text">@</span>
+                <input class="form-control" type="email" name="emailContato" value="<?= $dados["emailContato"] ?>" required>
+                <div class="valid-feedback">Está tudo correto, prossiga!</div>
+                <div class="invalid-feedback">Por favor, digite um e-mail válido!</div>
             </div>
         </div>
 

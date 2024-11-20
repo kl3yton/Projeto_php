@@ -37,8 +37,6 @@
 
                     <li class="nav-item" id="tarefas"><a class="nav-link" href="index.php?menuop=tarefas">Tarefas</a></li>
 
-                    <li class="nav-item" id="eventos"><a class="nav-link" href="index.php?menuop=eventos">Eventos</a></li>
-
                 </ul>
             </div>
         </nav>
@@ -74,9 +72,6 @@
                     break;
             case 'tarefas':
                 include("paginas/tarefas/tarefas.php");
-                break;
-            case 'eventos':
-                include("paginas/eventos/eventos.php");
                 break;
             default:
                 include("paginas/home/home.php");

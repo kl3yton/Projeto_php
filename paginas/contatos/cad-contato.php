@@ -13,6 +13,16 @@
                 <div class="invalid-feedback">Campo obrigatório de no máximo 255 caracteres!</div>
             </div>
         </div>
+
+        <div class="col-md-12">
+            <label class="form-label" for="telefoneContato">Telefone</label>
+            <div class="input-group has-validation">
+                <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
+                <input class="form-control" type="text" name="telefoneContato" id="telefoneContato" required>
+                <div class="valid-feedback">Está tudo correto, prossiga!</div>
+                <div class="invalid-feedback">Por favor digite um número correto!</div>
+            </div>
+        </div>
     
         <div class="col-md-12">
             <label class="form-label" for="emailContato">E-mail</label>
@@ -21,16 +31,6 @@
                 <input class="form-control" type="text" name="emailContato" id="emailContato" required>
                 <div class="valid-feedback">Está tudo correto, prossiga!</div>
                 <div class="invalid-feedback">Por favor digite o e-mail válido!</div>
-            </div>
-        </div>
-    
-        <div class="col-md-12">
-            <label class="form-label" for="telefoneContato">Telefone</label>
-            <div class="input-group has-validation">
-                <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
-                <input class="form-control" type="text" name="telefoneContato" id="telefoneContato" required>
-                <div class="valid-feedback">Está tudo correto, prossiga!</div>
-                <div class="invalid-feedback">Por favor digite um número correto!</div>
             </div>
         </div>
     
