@@ -32,20 +32,6 @@ if ($conexao->query($sql) === TRUE) {
     if ($conexao->query($sql) === FALSE) {
         die("Erro na criação da tabela tb_contato: " . $conexao->error);
     } 
-    
-    // Criação da nova tabela tb_produtos
-    $sql = "CREATE TABLE IF NOT EXISTS tb_produtos(
-        idproduto INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-        nomeProduto VARCHAR(200) NOT NULL,
-        descricaoProduto TEXT,
-        precoProduto DECIMAL(10, 2) NOT NULL,
-        quantidadeProduto INT(11) NOT NULL,
-        dataCadastroProduto TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-    )";
-
-    if ($conexao->query($sql) === FALSE) {
-        die("Erro na criação da tabela tb_produtos: " . $conexao->error);
-    } 
 
 } else {
     die("Erro ao criar banco de dados: " . $conexao->error);

@@ -21,8 +21,8 @@
             <tr>
                 <th>ID</th>
                 <th>Nome</th>
-                <th>E-mail</th>
                 <th>Telefone</th>
+                <th>E-mail</th>
                 <th>Endereço</th>
                 <th>Data de Nasc.</th>
                 <th>Editar</th>
