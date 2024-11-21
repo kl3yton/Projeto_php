@@ -25,12 +25,27 @@ if ($conexao->query($sql) === TRUE) {
         emailContato VARCHAR(100) NOT NULL,
         telefoneContato VARCHAR(50) NOT NULL,
         enderecoContato VARCHAR(200) NOT NULL,
-        data_nasc_Contato DATE NOT NULL,
-        tagFavorito TINYINT(1) DEFAULT NULL
+        data_nasc_Contato DATE NOT NULL
     )";
 
     if ($conexao->query($sql) === FALSE) {
         die("Erro na criação da tabela tb_contato: " . $conexao->error);
+    } 
+
+    $sql = "CREATE TABLE IF NOT EXISTS tb_tarefas (
+        idTarefa INT AUTO_INCREMENT PRIMARY KEY,
+        tituloTarefa VARCHAR(255) NOT NULL,
+        descricaoTarefa TEXT,
+        dataConclusaoTarefa DATE,
+        horaConclusaoTarefa TIME,
+        dataLembreteTarefa DATE,
+        horaLembreteTarefa TIME,
+        recorrenciaTarefa int(11),
+        statusTarefa TINYINT(1) NOT NULL
+        )";
+
+    if ($conexao->query($sql) === FALSE) {
+        die("Erro na criação da tabela tb_tarefas: " . $conexao->error);
     } 
 
 } else {

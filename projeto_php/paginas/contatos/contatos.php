@@ -1,5 +1,9 @@
 <?php 
     include ("db/db_agenda.php");
+
+    //Váriavel da pesquisa
+    $txt_pesquisa = isset($_POST["txt_pesquisa"]) ? $_POST["txt_pesquisa"] : "";
+
 ?>
 <head>
     <h3><i class="bi bi-person-square"> </i>Contatos</h3>
@@ -10,7 +14,7 @@
 <div>
     <form action="index.php?menuop=contatos" method="post">
         <div class="input-group">
-        <input class="form-control col-3" type="text" name="txt_pesquisa">
+        <input class="form-control col-3" type="text" name="txt_pesquisa" value="<?=$txt_pesquisa?>">
         <button class="btn btn-outline-success btn-sm" type="submit"> <i class="bi bi-search"> </i>Pesquisa</button>
         </div>
     </form>
@@ -38,8 +42,6 @@
             $pagina = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
 
             $inicio = ($pagina - 1) * $quantidade;
-
-            $txt_pesquisa = isset($_POST["txt_pesquisa"]) ? $_POST["txt_pesquisa"] : "";
 
             $sql = "SELECT 
                         idContato,
