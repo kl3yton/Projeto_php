@@ -26,7 +26,7 @@
                 <img src="img/logo_agendador.png" alt="Sis-Agendador" width="120">
             </a>
 
-                    <!-- Estilização dos links do navegador utilizadno as navbar do bootsrap-->
+                    <!-- Estilização dos links do navegador utilizando as navbar do bootstrap-->
 
             <div class="collapse navbar-collapse" id="ConteudoNavbarSuportado">
                 <ul class="navbar-nav mr-auto">
@@ -34,8 +34,6 @@
                     <li class="nav-item active" id="home"><a class="nav-link" href="index.php?menuop=home">Home</a></li>
 
                     <li class="nav-item" id="contatos"><a class="nav-link" href="index.php?menuop=contatos">Contatos</a></li>
-
-                    <li class="nav-item" id="tarefas"><a class="nav-link" href="index.php?menuop=tarefas">Tarefas</a></li>
 
                 </ul>
             </div>
@@ -69,21 +67,6 @@
                 break;
             case 'atualizar-contato':
                     include("paginas/contatos/atualizar-contato.php");
-                    break;
-            case 'tarefas':
-                include("paginas/tarefas/tarefas.php");
-                break;
-                case 'cad-tarefa':
-                    include("paginas/tarefas/cad-tarefa.php");
-                    break;
-                case 'inserir-tarefa':
-                    include("paginas/tarefas/inserir-tarefa.php");
-                    break;
-                case 'editar-tarefa':
-                    include("paginas/tarefas/editar-tarefa.php");
-                    break;
-                case 'atualizar-tarefa':
-                    include("paginas/tarefas/atualizar-tarefa.php");
                     break;
             default:
                 include("paginas/home/home.php");
