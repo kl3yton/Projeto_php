@@ -68,7 +68,7 @@ $totalPagina = ceil($numTotal / $quantidade);
     <h3><i class="bi bi-list-task"> </i>Tarefas</h3>
 
     <div>
-        <a class="btn btn-outline-primary mb-2" href="index.php?menuop=cad-terefas"><i class="bi bi-list-task"></i> Nova Tarefa</a>
+    <a class="btn btn-outline-primary mb-2" href="index.php?menuop=cad-tarefa"><i class="bi bi-list-task"></i> Nova Tarefa</a>
     </div>
 
     <div>
@@ -114,7 +114,7 @@ $totalPagina = ceil($numTotal / $quantidade);
                     <td class="text-nowrap"><?=$dados["dataConclusaoTarefa"] ?></td>
                     <td class="text-nowrap"><?=$dados["horaConclusaoTarefa"] ?></td>
                     <td class="text-center">
-                        <a class="btn btn-outline-warning btn-sm" href="index.php?menuop=editar-tareda&idTarefa=<?=$dados["idTarefa"] ?>"><i class="bi bi-pencil-square"></i></a>
+                        <a class="btn btn-outline-warning btn-sm" href="index.php?menuop=editar-tarefa&idTarefa=<?=$dados["idTarefa"] ?>"><i class="bi bi-pencil-square"></i></a>
                     </td>
                     <td class="text-center">
                         <a class="btn btn-outline-danger btn-sm" href="index.php?menuop=excluir-terefa&idTarefa=<?=$dados["idTarefa"] ?>"><i class="bi bi-trash"></i></a>

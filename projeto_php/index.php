@@ -73,6 +73,18 @@
             case 'tarefas':
                 include("paginas/tarefas/tarefas.php");
                 break;
+                case 'cad-tarefa':
+                    include("paginas/tarefas/cad-tarefa.php");
+                    break;
+                case 'inserir-tarefa':
+                    include("paginas/tarefas/inserir-tarefa.php");
+                    break;
+                case 'editar-tarefa':
+                    include("paginas/tarefas/editar-tarefa.php");
+                    break;
+                case 'atualizar-tarefa':
+                    include("paginas/tarefas/atualizar-tarefa.php");
+                    break;
             default:
                 include("paginas/home/home.php");
                     break;
