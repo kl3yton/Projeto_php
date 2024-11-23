@@ -1,7 +1,8 @@
 <div class="d-flex flex-column justify-content-center align-items-center min-vh-100">
 
-    <h3 class=" mt-3 bi bi-person-square">Cadastro de Contato</h3>
+    <h3 class="mt-3 bi bi-person-square">Cadastro de Contato</h3>
 
+    <!-- Formulário para inserir dados -->
     <form class="col-12 col-md-8 col-lg-6 needs-validation" action="index.php?menuop=inserir-contato" method="post" novalidate>
     
         <div class="col-md-12">
@@ -54,6 +55,7 @@
             </div>
         </div>
     
+        <!-- Botão para enviar o formulário -->
         <div class="col-12 mt-3">
             <input class="btn btn-success w-100" type="submit" value="Adicionar" name="btnadicionar">
         </div>
